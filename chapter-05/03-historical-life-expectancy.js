@@ -4,13 +4,13 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
-var ancestry = JSON.parse(require('./ancestry.js'));
+const ancestry = JSON.parse(require('./ancestry.js'));
 
 // Solution
 function groupBy(array, f) {
-  var grouped = {};
-  array.forEach(function(element) {
-    var group = f(element);
+  const grouped = {};
+  array.forEach((element) => {
+    const group = f(element);
     if (group in grouped) {
       grouped[group].push(element);
     } else {
@@ -20,13 +20,10 @@ function groupBy(array, f) {
   return grouped;
 }
 
-var centuries = groupBy(ancestry, function(person) {
-  return Math.ceil(person.died / 100);
-});
-
-for (var century in centuries) {
-  var ages = centuries[century].map(function(person) {
-    return person.died - person.born;
+const centuries = groupBy(ancestry, person => Math.ceil(person.died / 100));
+Object.keys(centuries)
+  .forEach((century) => {
+    const people = centuries[century];
+    const ages = people.map(person => person.died - person.born);
+    console.log(century, ':', average(ages));
   });
-  console.log(century, ":", average(ages));
-}

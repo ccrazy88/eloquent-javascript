@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 function countChar(str, char) {
-  count = 0;
-  for (var i = 0; i < str.length; i++) {
+  let count = 0;
+  for (let i = 0; i < str.length; i += 1) {
     if (str.charAt(i) === char) {
-      count++;
+      count += 1;
     }
   }
   return count;

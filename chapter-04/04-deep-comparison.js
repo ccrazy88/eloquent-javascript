@@ -1,10 +1,13 @@
+/* eslint-disable no-unused-vars */
 function isObject(x) {
   return typeof x === 'object' && x !== null;
 }
 
 function getProperties(object) {
-  var properties = [];
-  for (var property in object) {
+  const properties = [];
+  /* eslint-disable guard-for-in, no-restricted-syntax */
+  for (const property in object) {
+  /* eslint-disable guard-for-in, no-restricted-syntax */
     properties.push(property);
   }
   return properties;
@@ -18,14 +21,14 @@ function deepEqual(a, b) {
     return false;
   }
 
-  var aProperties = getProperties(a);
-  var bProperties = getProperties(b);
+  const aProperties = getProperties(a);
+  const bProperties = getProperties(b);
   if (aProperties.length !== bProperties.length) {
     return false;
   }
 
-  for (var i = 0; i < aProperties.length; i++) {
-    var property = aProperties[i];
+  for (let i = 0; i < aProperties.length; i += 1) {
+    const property = aProperties[i];
     if (!(property in b) || !deepEqual(a[property], b[property])) {
       return false;
     }

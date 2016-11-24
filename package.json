@@ -1,0 +1,21 @@
+{
+  "name": "eloquent-javascript",
+  "version": "0.0.1",
+  "description": "Solutions to problems in Eloquent JavaScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccrazy88/eloquent-javascript.git"
+  },
+  "author": "Chrisna Aing",
+  "bugs": {
+    "url": "https://github.com/ccrazy88/eloquent-javascript/issues"
+  },
+  "homepage": "https://github.com/ccrazy88/eloquent-javascript#readme",
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1"
+  }
+}

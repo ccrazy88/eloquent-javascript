@@ -4,17 +4,14 @@ function average(array) {
   return array.reduce(plus) / array.length;
 }
 
-var ancestry = JSON.parse(require('./ancestry.js'));
-var byName = {};
-ancestry.forEach(function(person) {
-  byName[person.name] = person;
-});
+const ancestry = JSON.parse(require('./ancestry.js'));
+
+const byName = {};
+ancestry.forEach((person) => { byName[person.name] = person; });
 
 // Solution
-var differences = ancestry.filter(function(person) {
-  return person.mother in byName;
-}).map(function(person) {
-  return person.born - byName[person.mother].born;
-});
+const differences = ancestry
+  .filter(person => person.mother in byName)
+  .map(person => person.born - byName[person.mother].born);
 
 console.log(average(differences));

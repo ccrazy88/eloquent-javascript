@@ -1,15 +1,17 @@
+/* eslint-disable no-unused-vars */
 function range(start, end, step) {
-  var array = [];
-  if (step === undefined) {
-    step = start <= end ? 1 : -1;
+  const array = [];
+  let derivedStep = step;
+  if (derivedStep === undefined) {
+    derivedStep = start <= end ? 1 : -1;
   }
 
-  if (step > 0) {
-    for (var up = start; up <= end; up += step) {
+  if (derivedStep > 0) {
+    for (let up = start; up <= end; up += derivedStep) {
       array.push(up);
     }
-  } else if (step < 0) {
-    for (var down = start; down >= end; down += step) {
+  } else if (derivedStep < 0) {
+    for (let down = start; down >= end; down += derivedStep) {
       array.push(down);
     }
   }
@@ -18,5 +20,5 @@ function range(start, end, step) {
 }
 
 function sum(array) {
-  return array.reduce(function(a, b) {return a + b;});
+  return array.reduce((a, b) => a + b);
 }

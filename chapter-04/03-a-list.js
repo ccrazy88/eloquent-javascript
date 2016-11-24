@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 function arrayToList(array) {
   if (array.length === 0) {
     return null;
   }
-  return {value: array[0], rest: arrayToList(array.slice(1))};
+  return { value: array[0], rest: arrayToList(array.slice(1)) };
 }
 
 function listToArray(list) {
@@ -15,7 +16,7 @@ function listToArray(list) {
 }
 
 function prepend(element, list) {
-  return {value: element, rest: list};
+  return { value: element, rest: list };
 }
 
 function nth(list, n) {

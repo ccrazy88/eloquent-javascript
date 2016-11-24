@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function isEven(n) {
   if (n === 0) {
     return true;
@@ -5,7 +6,6 @@ function isEven(n) {
     return false;
   } else if (n < 0) {
     return isEven(-n);
-  } else {
-    return isEven(n - 2);
   }
+  return isEven(n - 2);
 }
