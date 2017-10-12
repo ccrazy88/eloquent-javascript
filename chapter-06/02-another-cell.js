@@ -1,7 +1,9 @@
-function StretchCell(inner, width, height) {
-  this.inner = inner;
-  this.width = width;
-  this.height = height;
+class StretchCell {
+  constructor(inner, width, height) {
+    this.inner = inner;
+    this.width = width;
+    this.height = height;
+  }
 }
 
 StretchCell.prototype.minWidth = () =>

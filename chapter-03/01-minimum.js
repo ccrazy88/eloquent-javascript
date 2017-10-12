@@ -1,4 +1,1 @@
-/* eslint-disable no-unused-vars */
-function min(a, b) {
-  return a < b ? a : b;
-}
+const min = (a, b) => (a < b ? a : b);

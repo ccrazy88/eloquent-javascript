@@ -1,15 +1,15 @@
 // Provided code
-function average(array) {
-  function plus(a, b) { return a + b; }
+const average = array => {
+  const plus = (a, b) => a + b;
   return array.reduce(plus) / array.length;
-}
+};
 
-const ancestry = JSON.parse(require('./ancestry.js'));
+const ancestry = JSON.parse(require("./ancestry.js"));
 
 // Solution
-function groupBy(array, f) {
+const groupBy = (array, f) => {
   const grouped = {};
-  array.forEach((element) => {
+  array.forEach(element => {
     const group = f(element);
     if (group in grouped) {
       grouped[group].push(element);
@@ -18,12 +18,11 @@ function groupBy(array, f) {
     }
   });
   return grouped;
-}
+};
 
 const centuries = groupBy(ancestry, person => Math.ceil(person.died / 100));
-Object.keys(centuries)
-  .forEach((century) => {
-    const people = centuries[century];
-    const ages = people.map(person => person.died - person.born);
-    console.log(century, ':', average(ages));
-  });
+Object.keys(centuries).forEach(century => {
+  const people = centuries[century];
+  const ages = people.map(person => person.died - person.born);
+  console.log(century, ":", average(ages));
+});

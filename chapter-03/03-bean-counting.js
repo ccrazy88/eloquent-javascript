@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-function countChar(str, char) {
+const countChar = (str, char) => {
   let count = 0;
   for (let i = 0; i < str.length; i += 1) {
     if (str.charAt(i) === char) {
@@ -7,8 +6,6 @@ function countChar(str, char) {
     }
   }
   return count;
-}
+};
 
-function countBs(str) {
-  return countChar(str, 'B');
-}
+const countBs = str => countChar(str, "B");

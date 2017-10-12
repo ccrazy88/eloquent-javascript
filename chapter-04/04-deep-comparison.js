@@ -1,19 +1,14 @@
-/* eslint-disable no-unused-vars */
-function isObject(x) {
-  return typeof x === 'object' && x !== null;
-}
+const isObject = x => typeof x === "object" && x !== null;
 
-function getProperties(object) {
+const getProperties = object => {
   const properties = [];
-  /* eslint-disable guard-for-in, no-restricted-syntax */
   for (const property in object) {
-  /* eslint-disable guard-for-in, no-restricted-syntax */
     properties.push(property);
   }
   return properties;
-}
+};
 
-function deepEqual(a, b) {
+const deepEqual = (a, b) => {
   if (a === b) {
     return true;
   }
@@ -34,4 +29,4 @@ function deepEqual(a, b) {
     }
   }
   return true;
-}
+};

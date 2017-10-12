@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-function range(start, end, step) {
+const range = (start, end, step) => {
   const array = [];
   let derivedStep = step;
   if (derivedStep === undefined) {
@@ -17,8 +16,6 @@ function range(start, end, step) {
   }
 
   return array;
-}
+};
 
-function sum(array) {
-  return array.reduce((a, b) => a + b);
-}
+const sum = array => array.reduce((a, b) => a + b);

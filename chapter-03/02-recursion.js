@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-function isEven(n) {
+const isEven = n => {
   if (n === 0) {
     return true;
   } else if (n === 1) {
@@ -8,4 +7,4 @@ function isEven(n) {
     return isEven(-n);
   }
   return isEven(n - 2);
-}
+};

@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "plugins": ["import", "prettier"],
+  "rules": {
+    "import/unambiguous": "off",
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "prettier/prettier": "error",
+    "sort-imports": "error",
+    "sort-keys": "error",
+    "sort-vars": "error"
+  }
+}
