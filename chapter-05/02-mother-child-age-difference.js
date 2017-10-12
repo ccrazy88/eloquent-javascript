@@ -15,4 +15,5 @@ ancestry.forEach(person => {
 const differences = ancestry
   .filter(person => person.mother in byName)
   .map(person => person.born - byName[person.mother].born);
+
 console.log(average(differences));

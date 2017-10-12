@@ -17,3 +17,8 @@ const reverseArrayInPlace = array => {
     right -= 1;
   }
 };
+
+console.log(reverseArray(["A", "B", "C"]));
+const arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);

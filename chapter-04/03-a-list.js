@@ -26,3 +26,8 @@ const nth = (list, n) => {
   }
   return nth(list.rest, n - 1);
 };
+
+console.log(arrayToList([10, 20]));
+console.log(listToArray(arrayToList([10, 20, 30])));
+console.log(prepend(10, prepend(20, null)));
+console.log(nth(arrayToList([10, 20, 30]), 1));
