@@ -4,6 +4,7 @@
   "description": "Solutions to problems in Eloquent JavaScript.",
   "repository": "https://github.com/ccrazy88/eloquent-javascript.git",
   "author": "Chrisna Aing",
+  "license": "MIT",
   "scripts": {
     "precommit": "lint-staged"
   },
