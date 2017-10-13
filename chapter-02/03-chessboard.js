@@ -1,8 +1,9 @@
+const { range } = require("../global");
+
 const size = 8;
 let chessboard = "";
-
-for (let x = 0; x < size; x += 1) {
-  for (let y = 0; y < size; y += 1) {
+for (const x of range(0, size)) {
+  for (const y of range(0, size)) {
     chessboard += (x + y) % 2 === 0 ? " " : "#";
   }
   chessboard += "\n";

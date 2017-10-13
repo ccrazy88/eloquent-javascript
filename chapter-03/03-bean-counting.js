@@ -1,6 +1,8 @@
+const { range } = require("../global");
+
 const countChar = (str, char) => {
   let count = 0;
-  for (let i = 0; i < str.length; i += 1) {
+  for (const i of range(0, str.length)) {
     if (str.charAt(i) === char) {
       count += 1;
     }

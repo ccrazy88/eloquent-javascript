@@ -1,9 +1,5 @@
 // Provided code
-const average = array => {
-  const plus = (a, b) => a + b;
-  return array.reduce(plus) / array.length;
-};
-
+const average = array => array.reduce((a, b) => a + b) / array.length;
 const ancestry = JSON.parse(require("./ancestry.js"));
 
 // Solution

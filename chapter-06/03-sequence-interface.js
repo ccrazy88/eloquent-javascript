@@ -1,3 +1,5 @@
+const { range } = require("../global");
+
 // Interface
 // ---------
 // next(): returns the next element if there is one; otherwise returns
@@ -29,7 +31,8 @@ class RangeSeq {
 }
 
 const logFive = sequence => {
-  for (let i = 0; i < 5; i += 1) {
+  // eslint-disable-next-line no-unused-vars
+  for (const i of range(0, 5)) {
     const next = sequence.next();
     if (next) {
       console.log(next);

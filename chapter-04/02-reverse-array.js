@@ -1,6 +1,8 @@
+const { range } = require("../global");
+
 const reverseArray = array => {
   const newArray = [];
-  for (let i = 0; i < array.length; i += 1) {
+  for (const i of range(0, array.length)) {
     newArray.unshift(array[i]);
   }
   return newArray;

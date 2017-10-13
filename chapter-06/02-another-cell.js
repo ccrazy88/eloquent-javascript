@@ -1,7 +1,10 @@
+const { range } = require("../global");
+
 // Provided code
 const repeat = (string, times) => {
   let result = "";
-  for (var i = 0; i < times; i++) {
+  // eslint-disable-next-line no-unused-vars
+  for (const i of range(0, times)) {
     result += string;
   }
   return result;
@@ -24,7 +27,7 @@ class TextCell {
 
   draw(width, height) {
     const result = [];
-    for (let i = 0; i < height; i++) {
+    for (const i of range(0, height)) {
       const line = this.text[i] || "";
       result.push(line + repeat(" ", width - line.length));
     }

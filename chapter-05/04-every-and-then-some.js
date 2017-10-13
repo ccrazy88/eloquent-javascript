@@ -1,5 +1,7 @@
+const { range } = require("../global");
+
 const every = (array, f) => {
-  for (let i = 0; i < array.length; i += 1) {
+  for (const i of range(0, array.length)) {
     if (!f(array[i])) {
       return false;
     }
@@ -8,7 +10,7 @@ const every = (array, f) => {
 };
 
 const some = (array, f) => {
-  for (let i = 0; i < array.length; i += 1) {
+  for (const i of range(0, array.length)) {
     if (f(array[i])) {
       return true;
     }

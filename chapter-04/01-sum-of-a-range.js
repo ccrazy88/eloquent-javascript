@@ -1,21 +1,21 @@
-const range = (start, end, step) => {
-  const array = [];
+const { range: globalRange } = require("../global");
+
+const range = (start, stop, step) => {
   let derivedStep = step;
   if (derivedStep === undefined) {
-    derivedStep = start <= end ? 1 : -1;
+    derivedStep = start <= stop ? 1 : -1;
   }
 
+  // Derive a new stop value because globalRange does not include stop but this
+  // version of range requires it.
+  let derivedStop = stop;
   if (derivedStep > 0) {
-    for (let up = start; up <= end; up += derivedStep) {
-      array.push(up);
-    }
+    derivedStop += 1;
   } else if (derivedStep < 0) {
-    for (let down = start; down >= end; down += derivedStep) {
-      array.push(down);
-    }
+    derivedStop -= 1;
   }
 
-  return array;
+  return Array.from(globalRange(start, derivedStop, derivedStep));
 };
 
 const sum = array => array.reduce((a, b) => a + b);

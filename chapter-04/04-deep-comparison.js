@@ -1,3 +1,5 @@
+const { range } = require("../global");
+
 const isObject = x => typeof x === "object" && x !== null;
 
 const getProperties = object => {
@@ -22,7 +24,7 @@ const deepEqual = (a, b) => {
     return false;
   }
 
-  for (let i = 0; i < aProperties.length; i += 1) {
+  for (const i of range(0, aProperties.length)) {
     const property = aProperties[i];
     if (!(property in b) || !deepEqual(a[property], b[property])) {
       return false;
