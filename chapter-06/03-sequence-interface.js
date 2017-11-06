@@ -22,7 +22,7 @@ class RangeSeq {
   }
 
   next() {
-    const next = this.from <= this.to ? this.from : undefined;
+    const next = this.from <= this.to ? this.from : null;
     if (next) {
       this.from += 1;
     }

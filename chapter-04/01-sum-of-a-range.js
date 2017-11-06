@@ -2,7 +2,7 @@ const { range: globalRange } = require("../global");
 
 const range = (start, stop, step) => {
   let derivedStep = step;
-  if (derivedStep === undefined) {
+  if (typeof derivedStep === "undefined") {
     derivedStep = start <= stop ? 1 : -1;
   }
 

@@ -20,7 +20,7 @@ const prepend = (element, list) => {
 
 const nth = (list, n) => {
   if (n < 0 || list === null) {
-    return undefined;
+    return null;
   } else if (n === 0) {
     return list.value;
   }

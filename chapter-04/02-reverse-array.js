@@ -8,6 +8,7 @@ const reverseArray = array => {
   return newArray;
 };
 
+/* eslint-disable no-param-reassign */
 const reverseArrayInPlace = array => {
   let left = 0;
   let right = array.length - 1;
@@ -19,6 +20,7 @@ const reverseArrayInPlace = array => {
     right -= 1;
   }
 };
+/* eslint-enable no-param-reassign */
 
 console.log(reverseArray(["A", "B", "C"]));
 const arrayValue = [1, 2, 3, 4, 5];

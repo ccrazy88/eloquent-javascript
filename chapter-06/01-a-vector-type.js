@@ -14,7 +14,7 @@ class Vector {
 }
 
 Object.defineProperty(Vector.prototype, "length", {
-  get: function() {
+  get() {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
 });

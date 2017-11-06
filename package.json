@@ -6,6 +6,7 @@
   "author": "Chrisna Aing",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint .",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -13,8 +14,8 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-config-ccrazy88": "^0.0.2",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.3.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.2.3",

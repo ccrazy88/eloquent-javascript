@@ -16,9 +16,7 @@ class TextCell {
   }
 
   minWidth() {
-    return this.text.reduce(function(width, line) {
-      return Math.max(width, line.length);
-    }, 0);
+    return this.text.reduce((width, line) => Math.max(width, line.length), 0);
   }
 
   minHeight() {
