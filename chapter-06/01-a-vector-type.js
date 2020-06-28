@@ -16,7 +16,7 @@ class Vector {
 Object.defineProperty(Vector.prototype, "length", {
   get() {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
-  }
+  },
 });
 
 console.log(new Vector(1, 2).plus(new Vector(2, 3)));

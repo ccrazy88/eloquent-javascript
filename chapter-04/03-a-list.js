@@ -1,11 +1,11 @@
-const arrayToList = array => {
+const arrayToList = (array) => {
   if (array.length === 0) {
     return null;
   }
   return { rest: arrayToList(array.slice(1)), value: array[0] };
 };
 
-const listToArray = list => {
+const listToArray = (list) => {
   if (list === null) {
     return [];
   } else if (list.rest === null) {

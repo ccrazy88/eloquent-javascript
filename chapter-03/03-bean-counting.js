@@ -10,7 +10,7 @@ const countChar = (str, char) => {
   return count;
 };
 
-const countBs = str => countChar(str, "B");
+const countBs = (str) => countChar(str, "B");
 
 console.log(countBs("BBC"));
 console.log(countChar("kakkerlak", "k"));

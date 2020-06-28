@@ -18,7 +18,7 @@ const range = (start, stop, step) => {
   return Array.from(globalRange(start, derivedStop, derivedStep));
 };
 
-const sum = array => array.reduce((a, b) => a + b);
+const sum = (array) => array.reduce((a, b) => a + b);
 
 console.log(range(1, 10));
 console.log(range(5, 2, -1));

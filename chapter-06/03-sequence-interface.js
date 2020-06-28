@@ -30,7 +30,7 @@ class RangeSeq {
   }
 }
 
-const logFive = sequence => {
+const logFive = (sequence) => {
   // eslint-disable-next-line no-unused-vars
   for (const i of range(0, 5)) {
     const next = sequence.next();

@@ -1,6 +1,6 @@
 const { range } = require("../global");
 
-const reverseArray = array => {
+const reverseArray = (array) => {
   const newArray = [];
   for (const i of range(0, array.length)) {
     newArray.unshift(array[i]);
@@ -9,7 +9,7 @@ const reverseArray = array => {
 };
 
 /* eslint-disable no-param-reassign */
-const reverseArrayInPlace = array => {
+const reverseArrayInPlace = (array) => {
   let left = 0;
   let right = array.length - 1;
   while (left < right) {

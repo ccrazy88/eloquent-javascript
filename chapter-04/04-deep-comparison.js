@@ -1,8 +1,8 @@
 const { range } = require("../global");
 
-const isObject = x => typeof x === "object" && x !== null;
+const isObject = (x) => typeof x === "object" && x !== null;
 
-const getProperties = object => {
+const getProperties = (object) => {
   const properties = [];
   /* eslint-disable guard-for-in */
   for (const property in object) {
