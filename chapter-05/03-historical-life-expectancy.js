@@ -1,6 +1,6 @@
 // Provided code
 const average = (array) => array.reduce((a, b) => a + b) / array.length;
-const ancestry = JSON.parse(require("./ancestry.js"));
+const ancestry = JSON.parse(require("./ancestry"));
 
 // Solution
 const groupBy = (array, f) => {
