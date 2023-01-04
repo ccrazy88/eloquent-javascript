@@ -13,15 +13,15 @@
     "*.js": "eslint --fix"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^5.17.0",
-    "eslint": "^8.12.0",
-    "eslint-config-ccrazy88": "^7.0.2",
-    "eslint-import-resolver-typescript": "^2.7.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.7",
-    "prettier": "^2.6.2",
-    "typescript": "^4.6.3"
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-ccrazy88": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4"
   }
 }
