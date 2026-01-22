@@ -1,6 +1,5 @@
 const range = function* range(start, stop, step = 1) {
   if (step < 0 && start > stop) {
-    // eslint-disable-next-line for-direction
     for (let i = start; i > stop; i += step) {
       yield i;
     }
